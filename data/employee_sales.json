@@ -1,0 +1,290 @@
+[
+  {
+    "month": "2024-01",
+    "employee_id": "EMP001",
+    "employee_name": "Sarah Chen",
+    "position": "Senior Sales Representative",
+    "sales_amount": 12450.75,
+    "transactions": 45
+  },
+  {
+    "month": "2024-01",
+    "employee_id": "EMP002",
+    "employee_name": "John Smith",
+    "position": "Sales Representative",
+    "sales_amount": 15680.30,
+    "transactions": 52
+  },
+  {
+    "month": "2024-01",
+    "employee_id": "EMP003",
+    "employee_name": "Maria Garcia",
+    "position": "Sales Representative",
+    "sales_amount": 14250.60,
+    "transactions": 48
+  },
+  {
+    "month": "2024-02",
+    "employee_id": "EMP001",
+    "employee_name": "Sarah Chen",
+    "position": "Senior Sales Representative",
+    "sales_amount": 13890.45,
+    "transactions": 49
+  },
+  {
+    "month": "2024-02",
+    "employee_id": "EMP002",
+    "employee_name": "John Smith",
+    "position": "Sales Representative",
+    "sales_amount": 16420.80,
+    "transactions": 55
+  },
+  {
+    "month": "2024-02",
+    "employee_id": "EMP003",
+    "employee_name": "Maria Garcia",
+    "position": "Sales Representative",
+    "sales_amount": 15780.25,
+    "transactions": 51
+  },
+  {
+    "month": "2024-03",
+    "employee_id": "EMP001",
+    "employee_name": "Sarah Chen",
+    "position": "Senior Sales Representative",
+    "sales_amount": 14560.90,
+    "transactions": 50
+  },
+  {
+    "month": "2024-03",
+    "employee_id": "EMP002",
+    "employee_name": "John Smith",
+    "position": "Sales Representative",
+    "sales_amount": 17890.60,
+    "transactions": 58
+  },
+  {
+    "month": "2024-03",
+    "employee_id": "EMP003",
+    "employee_name": "Maria Garcia",
+    "position": "Sales Representative",
+    "sales_amount": 16340.75,
+    "transactions": 54
+  },
+  {
+    "month": "2024-04",
+    "employee_id": "EMP001",
+    "employee_name": "Sarah Chen",
+    "position": "Senior Sales Representative",
+    "sales_amount": 15780.35,
+    "transactions": 53
+  },
+  {
+    "month": "2024-04",
+    "employee_id": "EMP002",
+    "employee_name": "John Smith",
+    "position": "Sales Representative",
+    "sales_amount": 18450.90,
+    "transactions": 60
+  },
+  {
+    "month": "2024-04",
+    "employee_id": "EMP003",
+    "employee_name": "Maria Garcia",
+    "position": "Sales Representative",
+    "sales_amount": 17230.45,
+    "transactions": 56
+  },
+  {
+    "month": "2024-05",
+    "employee_id": "EMP001",
+    "employee_name": "Sarah Chen",
+    "position": "Senior Sales Representative",
+    "sales_amount": 16890.75,
+    "transactions": 56
+  },
+  {
+    "month": "2024-05",
+    "employee_id": "EMP002",
+    "employee_name": "John Smith",
+    "position": "Sales Representative",
+    "sales_amount": 19670.30,
+    "transactions": 63
+  },
+  {
+    "month": "2024-05",
+    "employee_id": "EMP003",
+    "employee_name": "Maria Garcia",
+    "position": "Sales Representative",
+    "sales_amount": 18450.60,
+    "transactions": 59
+  },
+  {
+    "month": "2024-06",
+    "employee_id": "EMP001",
+    "employee_name": "Sarah Chen",
+    "position": "Senior Sales Representative",
+    "sales_amount": 17560.90,
+    "transactions": 58
+  },
+  {
+    "month": "2024-06",
+    "employee_id": "EMP002",
+    "employee_name": "John Smith",
+    "position": "Sales Representative",
+    "sales_amount": 20340.75,
+    "transactions": 65
+  },
+  {
+    "month": "2024-06",
+    "employee_id": "EMP003",
+    "employee_name": "Maria Garcia",
+    "position": "Sales Representative",
+    "sales_amount": 19120.30,
+    "transactions": 61
+  },
+  {
+    "month": "2024-07",
+    "employee_id": "EMP001",
+    "employee_name": "Sarah Chen",
+    "position": "Senior Sales Representative",
+    "sales_amount": 18230.45,
+    "transactions": 60
+  },
+  {
+    "month": "2024-07",
+    "employee_id": "EMP002",
+    "employee_name": "John Smith",
+    "position": "Sales Representative",
+    "sales_amount": 21560.90,
+    "transactions": 68
+  },
+  {
+    "month": "2024-07",
+    "employee_id": "EMP003",
+    "employee_name": "Maria Garcia",
+    "position": "Sales Representative",
+    "sales_amount": 19890.75,
+    "transactions": 63
+  },
+  {
+    "month": "2024-08",
+    "employee_id": "EMP001",
+    "employee_name": "Sarah Chen",
+    "position": "Senior Sales Representative",
+    "sales_amount": 19450.60,
+    "transactions": 63
+  },
+  {
+    "month": "2024-08",
+    "employee_id": "EMP002",
+    "employee_name": "John Smith",
+    "position": "Sales Representative",
+    "sales_amount": 22780.35,
+    "transactions": 71
+  },
+  {
+    "month": "2024-08",
+    "employee_id": "EMP003",
+    "employee_name": "Maria Garcia",
+    "position": "Sales Representative",
+    "sales_amount": 20670.90,
+    "transactions": 65
+  },
+  {
+    "month": "2024-09",
+    "employee_id": "EMP001",
+    "employee_name": "Sarah Chen",
+    "position": "Senior Sales Representative",
+    "sales_amount": 20120.75,
+    "transactions": 65
+  },
+  {
+    "month": "2024-09",
+    "employee_id": "EMP002",
+    "employee_name": "John Smith",
+    "position": "Sales Representative",
+    "sales_amount": 23450.60,
+    "transactions": 73
+  },
+  {
+    "month": "2024-09",
+    "employee_id": "EMP003",
+    "employee_name": "Maria Garcia",
+    "position": "Sales Representative",
+    "sales_amount": 21340.30,
+    "transactions": 67
+  },
+  {
+    "month": "2024-10",
+    "employee_id": "EMP001",
+    "employee_name": "Sarah Chen",
+    "position": "Senior Sales Representative",
+    "sales_amount": 21780.90,
+    "transactions": 68
+  },
+  {
+    "month": "2024-10",
+    "employee_id": "EMP002",
+    "employee_name": "John Smith",
+    "position": "Sales Representative",
+    "sales_amount": 24670.75,
+    "transactions": 76
+  },
+  {
+    "month": "2024-10",
+    "employee_id": "EMP003",
+    "employee_name": "Maria Garcia",
+    "position": "Sales Representative",
+    "sales_amount": 22560.45,
+    "transactions": 70
+  },
+  {
+    "month": "2024-11",
+    "employee_id": "EMP001",
+    "employee_name": "Sarah Chen",
+    "position": "Senior Sales Representative",
+    "sales_amount": 22450.30,
+    "transactions": 70
+  },
+  {
+    "month": "2024-11",
+    "employee_id": "EMP002",
+    "employee_name": "John Smith",
+    "position": "Sales Representative",
+    "sales_amount": 25890.60,
+    "transactions": 78
+  },
+  {
+    "month": "2024-11",
+    "employee_id": "EMP003",
+    "employee_name": "Maria Garcia",
+    "position": "Sales Representative",
+    "sales_amount": 23780.90,
+    "transactions": 72
+  },
+  {
+    "month": "2024-12",
+    "employee_id": "EMP001",
+    "employee_name": "Sarah Chen",
+    "position": "Senior Sales Representative",
+    "sales_amount": 23670.45,
+    "transactions": 73
+  },
+  {
+    "month": "2024-12",
+    "employee_id": "EMP002",
+    "employee_name": "John Smith",
+    "position": "Sales Representative",
+    "sales_amount": 27120.30,
+    "transactions": 81
+  },
+  {
+    "month": "2024-12",
+    "employee_id": "EMP003",
+    "employee_name": "Maria Garcia",
+    "position": "Sales Representative",
+    "sales_amount": 24990.75,
+    "transactions": 75
+  }
+]

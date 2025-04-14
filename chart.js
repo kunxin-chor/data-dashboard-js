@@ -19,6 +19,12 @@ function drawBarChart(containerId, seriesData, labels, options = {}) {
         dataLabels: {
             enabled: false
         },
+        tooltip: {
+            enabled: true,
+            shared: true,
+            intersect: false,
+            custom: options.tooltipFormatter || undefined
+        },
         xaxis: {
             type: 'category',
             categories: labels
@@ -95,5 +101,53 @@ function output(...args) {
     consoleOutput.scrollTop = consoleOutput.scrollHeight;
 }
 
-// Export the function for use in other scripts
-window.output = output;
+/**
+ * Fetches JSON data from a given URL
+ * @param {string} url - The URL to fetch data from
+ * @returns {Promise<any>} - The parsed JSON data
+ * @throws {Error} - If the fetch fails or response is not OK
+ */
+async function loadJsonData(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        output('Error loading JSON data:', error.message);
+        throw error;
+    }
+}
+
+/**
+ * Groups data by a property and sums values
+ * @param {Array} data - Array of objects to process
+ * @param {string} groupKey - Property to group by
+ * @param {string} sumKey - Property to sum
+ * @returns {Array} - Array of objects with group and sum values
+ */
+function groupByAndSum(data, groupKey, sumKey) {
+    // Initialize our accumulator object
+    const tempResult = {};
+    
+    // Loop through each item in the data array
+    for (let i = 0; i < data.length; i++) {
+        const item = data[i];
+        const key = item[groupKey];
+        
+        // If we haven't seen this key before, initialize it to 0
+        if (!tempResult[key]) {
+            tempResult[key] = 0;
+        }
+        
+        // Add the sumKey value to our accumulator
+        tempResult[key] += item[sumKey];
+    }
+    
+    // Convert the object to an array of objects
+    return Object.entries(tempResult).map(([key, value]) => ({
+        [groupKey]: key,
+        [sumKey]: value
+    }));
+}
