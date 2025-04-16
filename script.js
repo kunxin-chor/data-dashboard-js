@@ -5,7 +5,7 @@ async function main() {
             name: 'Series 1',
             data: [44, 55, 41, 67, 22, 43, 21]
         }
-    ], ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']);
+    ], ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'], null, value => `${value.toLocaleString()} units`);
     
     output("Hello", "world");  // Outputs: [timestamp] Hello world
     output("Data:", { key: "value" });  // Outputs: [timestamp] Data: { "key": "value" }
