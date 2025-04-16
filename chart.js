@@ -1,5 +1,5 @@
 // Utility function to draw a bar chart
-function drawBarChart(containerId, seriesData, labels, tooltipFormatter = null, valueFormatter = value => value, options = {}) {
+function drawBarChart(containerId, seriesData, labels, tooltipFormatter = null, valueFormatter = null, options = {}) {
     // Default options
     const defaultOptions = {
         chart: {
@@ -23,7 +23,7 @@ function drawBarChart(containerId, seriesData, labels, tooltipFormatter = null, 
             enabled: true,
             shared: true,
             intersect: false,
-            custom: tooltipFormatter
+            custom: tooltipFormatter || (v=>v)
         },
         xaxis: {
             type: 'category',
@@ -31,7 +31,7 @@ function drawBarChart(containerId, seriesData, labels, tooltipFormatter = null, 
         },
         yaxis: {
             labels: {
-                formatter: valueFormatter
+                formatter: valueFormatter || (v=>v)
             }
         },
         fill: {
@@ -49,13 +49,66 @@ function drawBarChart(containerId, seriesData, labels, tooltipFormatter = null, 
     // Merge user options with defaults
     const finalOptions = { ...defaultOptions, ...options };
 
-    // Create the chart
+    // Create and render the chart
     const chart = new ApexCharts(document.querySelector(`#${containerId}`), {
         series: seriesData,
         ...finalOptions
     });
+    chart.render();
 
-    // Render the chart
+    return chart;
+}
+
+// Utility function to draw a line chart
+function drawLineChart(containerId, seriesData, tooltipFormatter = null, valueFormatter = null, options = {}) {
+    // Default options for line chart
+    const defaultOptions = {
+        chart: {
+            type: 'line',
+            height: '100%',
+            toolbar: {
+                show: false
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            curve: 'smooth',
+            width: 2
+        },
+        tooltip: {
+            enabled: true,
+            shared: true,
+            intersect: false,
+            custom: tooltipFormatter || (v=>v)  
+        },
+        // xaxis: {
+        //     type: 'category',
+        //     categories: labels
+        // },
+        yaxis: {
+            labels: {
+                formatter: valueFormatter || (v=>v)
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            position: 'back',
+            strokeDashArray: 3
+        },
+        colors: ['#008FFB']
+    };
+
+    // Merge user options with defaults
+    const finalOptions = { ...defaultOptions, ...options };
+
+    // Create and render the chart
+    const chart = new ApexCharts(document.querySelector(`#${containerId}`), {
+        series: seriesData,
+        ...finalOptions
+    });
     chart.render();
 
     return chart;
