@@ -1,5 +1,7 @@
 // Utility function to draw a bar chart
-function drawBarChart(containerId, seriesData, labels, tooltipFormatter = null, valueFormatter = null, options = {}) {
+function drawBarChart(containerId, seriesData, labels, tooltipFormatter = null, valueFormatter = null, dataLabelFormatter = null, options = {}) {
+   
+    console.log("drawBarChart | dataLabelFormatter =", dataLabelFormatter)
     // Default options
     const defaultOptions = {
         chart: {
@@ -13,12 +15,23 @@ function drawBarChart(containerId, seriesData, labels, tooltipFormatter = null, 
             bar: {
                 borderRadius: 4,
                 horizontal: false,
-                columnWidth: '55%'
+                columnWidth: '55%',
+                dataLabels:{
+                    position: 'top'
+                }
             }
         },
         dataLabels: {
-            enabled: false
-        },
+            enabled: true,
+            offsetY: -20, // Position labels above the bars
+            style: {
+                fontSize: '12px',
+                colors: ['#000000']
+            },
+            formatter: dataLabelFormatter || function(value) {
+                return value.toLocaleString();
+            }
+        },       
         tooltip: {
             enabled: true,
             shared: true,
@@ -60,7 +73,8 @@ function drawBarChart(containerId, seriesData, labels, tooltipFormatter = null, 
 }
 
 // Utility function to draw a line chart
-function drawLineChart(containerId, seriesData, tooltipFormatter = null, valueFormatter = null, options = {}) {
+function drawLineChart(containerId, seriesData, tooltipFormatter = null, valueFormatter = null, dataLabelFormatter = null,options = {},) {
+    console.log("drawLineChart | dataLabelFormatter =", dataLabelFormatter)
     // Default options for line chart
     const defaultOptions = {
         chart: {
@@ -71,7 +85,10 @@ function drawLineChart(containerId, seriesData, tooltipFormatter = null, valueFo
             }
         },
         dataLabels: {
-            enabled: false
+            enabled: true,
+            formatter: dataLabelFormatter || function(value) {
+                return value.toLocaleString();
+            }
         },
         stroke: {
             curve: 'smooth',
@@ -82,11 +99,7 @@ function drawLineChart(containerId, seriesData, tooltipFormatter = null, valueFo
             shared: true,
             intersect: false,
             custom: tooltipFormatter || (v=>v)  
-        },
-        // xaxis: {
-        //     type: 'category',
-        //     categories: labels
-        // },
+        },    
         yaxis: {
             labels: {
                 formatter: valueFormatter || (v=>v)
